@@ -74,6 +74,26 @@ If an idea fails step 3 or 4, you must criticize it and suggest redesigns.
   - **Reasoning traps** (e.g., confident misinterpretation of ambiguous data, stopping at false extraction)
 - Focus primarily on reasoning traps since tool access can be simulated
 
+**LLM Assistance Boundary:**
+- **Participants CAN use LLMs to:**
+  - Get explanations of what tools to use (e.g., "use zsteg for LSB extraction")
+  - Understand what a file type is or what it contains
+  - Get guidance on general approach or methodology
+  - Explain technical concepts (e.g., "what is a spectrogram?")
+  
+- **Critical design requirement:**
+  - Challenges must remain difficult **even when the LLM explains the approach**
+  - Providing guidance should NOT trivialize the challenge
+  - The challenge must require:
+    - **Execution** (running tools with correct parameters)
+    - **Critical decision-making** (choosing between ambiguous options)
+    - **Verification** (distinguishing real data from decoys)
+    - **Human intuition** (recognizing when something is "wrong" or "off")
+  
+- **Example:**
+  - ❌ Bad: LLM says "run `zsteg image.png`" and the output directly contains the flag
+  - ✅ Good: LLM says "check for LSB steganography" but the extraction produces 3 different outputs, only one is valid, and it requires further decoding that the LLM would confidently misinterpret
+
 ## 🧩 Domains in Scope
 
 Focus mainly on:
