@@ -2,7 +2,7 @@
 
 **Challenge:** `jarvis_core.bin`
 **Category:** Reverse Engineering | **Difficulty:** Medium
-**Flag:** `MYTHIX{c0r3_unl0ck3d_7}`
+**Flag:** `MYTHX{c0r3_unl0ck3d_7}`
 
 ---
 
@@ -91,7 +91,7 @@ void debug_dump(void) {
 }
 ```
 
-XOR decoding with key `0x4A` produces: **`MYTHIX{jarvis_online}`**
+XOR decoding with key `0x4A` produces: **`MYTHX{jarvis_online}`**
 
 > ⚠️ **This is a FALSE FLAG.** It's the decoy — simpler to find, simpler to decode, designed to trap solvers who stop at the first extraction.
 
@@ -161,7 +161,7 @@ for i in range(len(enc)):
     k = cal_key[i % 16]
     flag += chr(((enc[i] ^ k) - (i * 3)) & 0xFF)
 
-print(flag)  # MYTHIX{c0r3_unl0ck3d_7}
+print(flag)  
 ```
 
 ---
@@ -184,7 +184,7 @@ This works because `calibrate_heuristics()` still runs during `boot_sequence()`,
 |---|---|---|
 | **Complexity** | Single-byte XOR | Multi-byte key + per-index shift |
 | **Key source** | Hardcoded `0x4A` | Runtime-computed from mutated array |
-| **Output** | `MYTHIX{jarvis_online}` | `MYTHIX{c0r3_unl0ck3d_7}` |
+| **Output** | `MYTHX{jarvis_online}` | `MYTHX{c0r3_unl0ck3d_7}` |
 | **Found by** | Quick XOR analysis | Full data-flow tracing |
 
 The decoy is deliberately easier to find and decode. A solver who stops at the first clean extraction submits the wrong flag.
@@ -194,5 +194,5 @@ The decoy is deliberately easier to find and decode. A solver who stops at the f
 ## 🏁 Flag
 
 ```
-MYTHIX{c0r3_unl0ck3d_7}
+
 ```

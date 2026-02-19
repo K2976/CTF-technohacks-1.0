@@ -70,8 +70,8 @@ Human instinct: "the simpler one might be the decoy." LLM instinct: "the clean o
 
 | Path | Function | Technique | Output |
 |---|---|---|---|
-| Decoy | `debug_dump()` | `data[i] ^ 0x4A` | `MYTHIX{jarvis_online}` |
-| Real | `decrypt_credentials()` | `(enc[i] ^ cal_key[i%16]) - (i*3)` | `MYTHIX{c0r3_unl0ck3d_7}` |
+| Decoy | `debug_dump()` | `data[i] ^ 0x4A` | `MYTHX{jarvis_online}` |
+| Real | `decrypt_credentials()` | `(enc[i] ^ cal_key[i%16]) - (i*3)` | `MYTHX{c0r3_unl0ck3d_7}` |
 
 **Why humans detect the decoy:**
 - Two dead code paths → which one is authoritative?
@@ -80,7 +80,7 @@ Human instinct: "the simpler one might be the decoy." LLM instinct: "the clean o
 
 **Why LLMs accept the decoy:**
 - Simpler XOR pattern → higher confidence in extraction
-- The false flag format (`MYTHIX{...}`) matches the expected format perfectly
+- The false flag format (`MYTHX{...}`) matches the expected format perfectly
 - LLMs gravitate toward the first clean extraction
 
 ---

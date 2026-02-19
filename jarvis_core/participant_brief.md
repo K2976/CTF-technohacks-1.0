@@ -81,5 +81,5 @@ Reverse engineer the binary and recover the hidden authorization data.
 Submit the full flag including the prefix:
 
 ```
-MYTHIX{...}
+MYTHX{...}
 ```

@@ -31,8 +31,8 @@ C_SOURCE = os.path.join(BASE_DIR, "jarvis_core.c")
 # ─────────────────────────────────────────────
 # Flags
 # ─────────────────────────────────────────────
-REAL_FLAG = "MYTHIX{c0r3_unl0ck3d_7}"
-FALSE_FLAG = "MYTHIX{jarvis_online}"
+REAL_FLAG = "MYTHX{c0r3_unl0ck3d_7}"
+FALSE_FLAG = "MYTHX{jarvis_online}"
 DECOY_XOR_KEY = 0x4A
 
 # ─────────────────────────────────────────────
