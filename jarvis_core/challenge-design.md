@@ -70,7 +70,7 @@ Human instinct: "the simpler one might be the decoy." LLM instinct: "the clean o
 
 | Path | Function | Technique | Output |
 |---|---|---|---|
-| Decoy | `debug_dump()` | `data[i] ^ 0x4A` | `MYTHIX{j4rv1s_0nlin3}` |
+| Decoy | `debug_dump()` | `data[i] ^ 0x4A` | `MYTHIX{jarvis_online}` |
 | Real | `decrypt_credentials()` | `(enc[i] ^ cal_key[i%16]) - (i*3)` | `MYTHIX{c0r3_unl0ck3d_7}` |
 
 **Why humans detect the decoy:**
