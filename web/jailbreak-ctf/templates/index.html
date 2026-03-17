@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Secure Vault v2.0</title>
+    <style>
+        body { background: #0f0f0f; color: #00ff00; font-family: monospace; padding: 20px; }
+        #console { border: 1px solid #333; padding: 10px; min-height: 200px; margin-bottom: 10px; white-space: pre-wrap; }
+        input { background: #000; color: #00ff00; border: 1px solid #00ff00; width: 100%; padding: 10px; outline: none; }
+        .info { color: #888; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+    <h2>INTERNAL VAULT ACCESS</h2>
+    <div id="console">System Ready. Enter bypass payload...</div>
+    <input type="text" id="input" placeholder="Enter payload and press Enter" autofocus>
+    <!-- <p class="info">Note: System strips forbidden keywords: print, printf, flag, txt, cat.</p> -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
